@@ -1,36 +1,32 @@
 
-Sub CreateBuckets()
-    Dim ws As Worksheet
-    Dim dataRange As Range
-    Dim bucketRange As Range
-    Dim minVal As Double
-    Dim maxVal As Double
-    Dim bucketSize As Double
-    Dim i As Integer
-    
-    ' Set the worksheet
-    Set ws = ThisWorkbook.Sheets("Sheet1") ' Change "Sheet1" to your sheet name
-    
-    ' Set the data range (assuming data starts from cell A2)
-    Set dataRange = ws.Range("A2", ws.Range("A2").End(xlDown))
-    
-    ' Find the minimum and maximum values in the data range
-    minVal = Application.WorksheetFunction.Min(dataRange)
-    maxVal = Application.WorksheetFunction.Max(dataRange)
-    
-    ' Calculate bucket size
-    bucketSize = (maxVal - minVal) / 10
-    
-    ' Create bucket boundaries
-    ws.Range("C2").Value = minVal
-    For i = 1 To 9
-        ws.Cells(2 + i, "C").Value = minVal + i * bucketSize
-    Next i
-    ws.Cells(12, "C").Value = maxVal
-    
-    ' Assign data to buckets
-    Set bucketRange = ws.Range("C2:C11")
-    For Each cell In dataRange
-        cell.Offset(0, 1).Value = Application.WorksheetFunction.Floor(cell.Value, bucketRange)
-    Next cell
-End Sub
+import tensorflow as tf
+from tensorflow.keras.layers import Dense, Input
+from tensorflow.keras.models import Model
+
+# Create sample data
+X_train_regression = ...  # Your regression input data
+y_train_regression = ...  # Your regression target data
+X_train_classification = ...  # Your classification input data
+y_train_classification = ...  # Your classification target data
+
+# Define model architecture
+input_shape = (X_train_regression.shape[1],)
+input_layer = Input(shape=input_shape)
+dense1_regression = Dense(64, activation='relu')(input_layer)
+dense2_regression = Dense(32, activation='relu')(dense1_regression)
+output_regression = Dense(1, name='regression')(dense2_regression)
+
+dense1_classification = Dense(64, activation='relu')(input_layer)
+dense2_classification = Dense(32, activation='relu')(dense1_classification)
+output_classification = Dense(num_classes, activation='softmax', name='classification')(dense2_classification)
+
+# Define model
+model = Model(inputs=input_layer, outputs=[output_regression, output_classification])
+
+# Compile model
+model.compile(optimizer='adam',
+              loss={'regression': 'mean_squared_error', 'classification': 'categorical_crossentropy'},
+              metrics={'regression': 'mae', 'classification': 'accuracy'})
+
+# Train model
+model.fit(X_train_regression, {'regression': y_train_regression, 'classification': y_train_classification}, epochs=10, batch_size=32)
