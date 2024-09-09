@@ -1,0 +1,26 @@
+create date 
+
+from datetime import datetime, timedelta
+
+def generate_dates(input_date):
+    # Parse the input date
+    date = datetime.strptime(input_date, "%Y-%m")
+    
+    # Generate the outputs
+    output_1 = (date + timedelta(days=31)).strftime("%Y%m")
+    output_2 = (date + timedelta(days=62)).strftime("%Y%m")
+    output_3 = (date + timedelta(days=31)).strftime("%Y-%m-01")
+    
+    # Calculate the last day of the next month
+    last_day_of_next_month = (date + timedelta(days=62)).replace(day=1) - timedelta(days=1)
+    output_4 = last_day_of_next_month.strftime("%Y-%m-%d")
+    
+    output_5 = date.strftime("%Y%m")
+    output_6 = (date + timedelta(days=31)).strftime("%Y-%m")
+    output_7 = (date + timedelta(days=62)).strftime("%Y-%m")
+    
+    return output_1, output_2, output_3, output_4, output_5, output_6, output_7
+
+# Example usage
+input_date = "2023-12"
+print(generate_dates(input_date))
