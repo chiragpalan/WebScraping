@@ -23,3 +23,10 @@ df.show()
 
 
 =IF(SUMPRODUCT(($A$2:$A$100=A2)*($B$2:$B$100=1)*($C$2:$C$100=1))>0, 1, 0)
+
+
+=IF(SUMIFS(AH:AH, A:A, A2, AJ:AJ, 1) > 0, 
+     IF(SUMIFS(AJ:AJ, A:A, A2, AH:AH, 1) > 0, 
+         "Both", 
+         "f1 Only"), 
+     IF(SUMIFS(AJ:AJ, A:A, A2, AH:AH, 0) > 0, "f2 Only", "Error"))
