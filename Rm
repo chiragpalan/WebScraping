@@ -25,6 +25,20 @@ df.show()
 =IF(SUMPRODUCT(($A$2:$A$100=A2)*($B$2:$B$100=1)*($C$2:$C$100=1))>0, 1, 0)
 
 
+1. Business Knowledge
+"Your deep understanding of the business has always stood out to me. The way you analyze challenges and guide the team with strategic insights is inspiring. For instance, during [specific project or decision], your expertise helped us achieve [specific outcome]. This knowledge not only drives results but also motivates the team to enhance their own understanding."
+
+2. Human Values
+"I truly admire how you uphold strong human values in the workplace. Your fairness, integrity, and respect for others create a culture of trust and positivity. For example, your approach to [specific situation] showed your commitment to doing what’s right, even in challenging circumstances."
+
+3. Kindness
+"Your kindness is one of the qualities that sets you apart as a leader. Whether it's taking time to listen to team members' concerns or acknowledging their efforts, your empathetic nature fosters a supportive work environment. The way you handled [specific scenario] was a great example of your genuine care for the team."
+
+4. Helpfulness
+"Your willingness to support others, even when you’re managing your own workload, is greatly appreciated. I’ve personally seen you go out of your way to assist with [specific task or issue], and it made a significant difference in achieving our goals."
+
+
+
 =IF(SUMIFS(AH:AH, A:A, A2, AJ:AJ, 1) > 0, 
      IF(SUMIFS(AJ:AJ, A:A, A2, AH:AH, 1) > 0, 
          "Both", 
