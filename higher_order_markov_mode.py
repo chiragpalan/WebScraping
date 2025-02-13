@@ -83,6 +83,26 @@ data = [
     ['C3', 'A303', 'MF', '2023-11-01']
 ]
 
+
+import pandas as pd
+
+def get_transition_counts(self):
+    """
+    Retrieve the raw transition count matrix before normalization.
+    :return: Pandas DataFrame of transition counts
+    """
+    data = []
+    for prev_products, transitions in self.transition_matrix.items():
+        for next_product, count in transitions.items():
+            data.append([prev_products, next_product, count])
+
+    return pd.DataFrame(data, columns=['Previous_Products', 'Next_Product', 'Count'])
+
+# Attach the method to the class
+MarkovModel.get_transition_counts = get_transition_counts
+
+
+
 df = pd.DataFrame(data, columns=['Client_ID', 'Account_ID', 'Product', 'Date_Acct_Open'])
 
 # Train a second-order Markov model
