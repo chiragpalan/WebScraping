@@ -1,4 +1,10 @@
 1. CASA to wealth balance movement over 12 months (AND)
-
-
 2. (Majority transactions from CASA to wealth OR High wealth balance over 12 months OR High wealth to AUM ratio OR Multiple wealth product holdings over 3 months)
+
+
+seg 1
+
+1. Output of the TD NNM outflow model (Top 2 deciles) (AND)
+
+
+2. (TD renewed at higher than the offer rate OR Multiple saver product holding OR High fluctuation in CASA DAB)
