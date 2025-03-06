@@ -8,3 +8,10 @@ seg 1
 
 
 2. (TD renewed at higher than the offer rate OR Multiple saver product holding OR High fluctuation in CASA DAB)
+
+
+seg 5
+1. (Majority transactions across wealth/investment OR High wealth balance over 12 months OR High wealth to AUM ratio over 12 months OR Multiple wealth product holdings over 3 months) (AND)
+
+
+2. CASA to wealth balance movement over 12 months
