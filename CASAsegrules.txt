@@ -15,3 +15,173 @@ seg 5
 
 
 2. CASA to wealth balance movement over 12 months
+
+
+
+
+---
+
+Segment 1: Transectional
+
+Objective: Main bank, deepen relationship
+Conditions:
+
+1. Main banking flag over 12 months
+
+
+2. High deposit transactions compared to overall portfolio over 12 months
+
+
+3. Relatively flat CASA balance over the last 12 months
+
+
+
+Recommendation:
+Use AND between all conditions.
+Rationale: To ensure the customer is consistently using the bank as their primary institution, you want all three criteria to be met.
+
+
+---
+
+Segment 2: Sleepy Balance
+
+Objective: Balance retention
+Conditions:
+
+1. Average balance in the last 12 months has not moved much
+
+
+2. Very few or no CASA transactions in the last 12 months
+
+
+
+Recommendation:
+Use AND between these conditions.
+Rationale: Both signs of inactivity (stagnant balance and low transaction volume) should be present to clearly identify a “sleepy” account.
+
+
+---
+
+Segment 3: CASA Gamer Receptive to Wealth
+
+Objective: Wealth penetration
+Conditions:
+
+1. High fluctuation in CASA average daily balance
+
+
+2. Offus wealth holding
+
+
+3. Previously took up wealth products but currently have very minimal wealth AUM
+
+
+
+Recommendation:
+Use a hybrid structure:
+
+Condition 1 (High fluctuation in CASA ADB) is mandatory (AND)
+
+Followed by an OR between the wealth-related conditions:
+
+(Offus wealth holding OR previous wealth product uptake with minimal current wealth AUM)
+
+
+
+Rationale:
+You want to target customers who are actively using their CASA (Condition 1) and show at least one indicator of prior or potential wealth engagement (either they hold offus wealth or have taken up wealth products before). This composite logic makes sure you don’t miss clients who may be receptive to wealth products even if only one wealth signal is present.
+
+
+---
+
+Segment 4: Wealth Segment
+
+Objective: Wealth penetration, deepen CASA relationship beyond wealth transactional account
+Conditions:
+
+1. Majority transactions across wealth and investment
+
+
+2. High wealth balance over the last 12 months
+
+
+3. High wealth-to-AUM ratio over the last 12 months
+
+
+4. Multiple wealth product holdings over the last 12 months
+
+
+5. CASA-to-wealth balance movement over the last 12 months
+
+
+
+Recommendation:
+Adopt a composite structure:
+
+Make CASA-to-wealth balance movement (Condition 5) a mandatory criterion (AND)
+
+Then require at least one (or a combination) of the other wealth-related conditions to be met using OR among Conditions 1–4.
+
+
+Rationale:
+The key indicator is that customers are actively moving funds from CASA to wealth. To capture various dimensions of wealth engagement (transaction patterns, balance levels, product diversity), you allow for flexibility with the other signals.
+
+
+---
+
+Segment 5: TD Active Client Only
+
+Objective: Deepen CASA relationships beyond TD
+Conditions:
+
+1. High TD balance over 12 months
+
+
+2. High TD-to-AUM ratio over 12 months
+
+
+3. Holding only CASA and TD products (active)
+
+
+4. No wealth product holding in the last 12 months
+
+
+5. Low CASA balance
+
+
+
+Recommendation:
+Use AND between all conditions.
+Rationale:
+To focus on clients who are active in TD yet not engaging in wealth (and with low CASA balances that you aim to grow), every condition must be satisfied. This ensures you target a very specific group needing deeper CASA engagement.
+
+
+---
+
+Segment 6: Win Back
+
+Conditions:
+
+1. Sleepy balance customers with high offus AUM over 3 months
+
+
+2. High income or salary
+
+
+3. Do not have a high probability of AUM drop
+
+
+4. Clients who had moderate to high CASA balance during the past 12–24 months but low CASA balance in the past 12 months
+
+
+5. Minimal client-initiated transaction activity in the last 12 months
+
+
+
+Recommendation:
+Use AND between all conditions.
+Rationale:
+For a win-back strategy, you want to ensure that each customer in this segment shows a clear pattern of past activity combined with recent inactivity, while still having strong financial credentials and a low risk of further outflow. Meeting all conditions increases the likelihood that reactivation efforts will be effective.
+
+
+---
